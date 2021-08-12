@@ -1,27 +1,36 @@
-/*
--- data types --
-
-bool -----> true or false
-char -----> this type is declared as char[] or char[x]
-int ------> integer number
-float ----> single precision floating point
-double ---> double precision floating point
-void -----> represent the abscence of value
-wchar_t --> a wide character type
-
-*/
-
 #include <iostream>
-
-using namespace std;
 
 int main () {
 
-    bool var1;
+    // Numerical types
+    std::cout << "bytes len (Short): " << sizeof(short) << std::endl;
+    std::cout << "bytes len (Int): " << sizeof(int) << std::endl;
+    std::cout << "bytes len (Float): " << sizeof(float) << std::endl;
+    std::cout << "bytes len (Double): " << sizeof(double) << std::endl;
+    std::cout << "bytes len (Long): " << sizeof(long) << std::endl;
+    std::cout << "bytes len (Long Long): " << sizeof(long long) << std::endl;
 
-    var1 = false;
+    // String --> collection of caracters
+    std::string s = "hello World";
+    std::cout << s << std::endl;
+    // single characters string (one quote) --> char
+    char t = 'a';
+    std::cout << t << std::endl;
 
-    cout << var1 << endl;
+    // Bool
+    bool varbool; //bool -----> true or false
+    varbool = false;
+
+    char varchar[] = "teste123"; //char -----> this type is declared as char[] or char[x] if you don't specify the number it will be defined automatically.
+
+    // input
+
+    int x;
+    std::cout << "Input number: ";
+    std::cin >> x;
+    std::cout << "Your number is: " << x << std::endl;
+
 
     return 0;
 }
+
