@@ -24,8 +24,10 @@ int main(int argc, char *argv[] ) {
         << SDL_GetError() << endl;
     }
 
+    // The screen will be a loop that can handle events, when the X button is clicked, then it close.
     SDL_Event event;
     bool running = true;
+    int x, y, w, h;
 
     while (running) {
         while (SDL_PollEvent(&event)) {
@@ -34,6 +36,12 @@ int main(int argc, char *argv[] ) {
                 break;
             }
         }
+
+        SDL_GetWindowSize( window, &w, &h );
+
+        // SDL_GetWindowPosition( window, &x, &y );
+
+        cout << w << "," << h << endl;
     }
 
     SDL_DestroyWindow(window);
