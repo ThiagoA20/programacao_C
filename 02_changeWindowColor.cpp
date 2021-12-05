@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
 #include <iostream>
+#include <vector>
 
 #define window_width 400
 #define window_height 200
